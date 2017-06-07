@@ -18,9 +18,9 @@ WORKDIR  $SRC_DIR
 EXPOSE 9090
 
 # Build dulu chatnya
-RUN cd $SRC_DIR; go build -o chat
+# RUN cd $SRC_DIR; go build -o chat; ls; pwd
 
 # running aplikasinya
-RUN chmod +x chat
+# RUN chmod +x chat
 
-ENTRYPOINT ["./chat"]
+CMD ["go","run","main.go"]
