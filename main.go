@@ -7,10 +7,11 @@ import (
 
 func main() {
 
-	log.Println("ListenAndServe: localhost:9090")
+	var port = ":9090"
 
 	//start webserver
-	if err := http.ListenAndServe(":9090", nil); err != nil {
+	log.Println("ListenAndServe: localhost:", port)
+	if err := http.ListenAndServe(port, nil); err != nil {
 		log.Println("ListenAndServe:", err)
 	}
 
