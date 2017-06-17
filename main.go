@@ -1,3 +1,5 @@
+// lihat file client.go
+
 //golang memiliki keunikan dalam menjalankan programnya
 //jika kita menginginkan menjalankan program secara langsung dengan
 //mengetikan run main.go secara langsung dari command line kita
@@ -46,7 +48,6 @@ type templateHandler struct {
 // pada http.Handle, http.Handle sendiri memiliki parameter
 // pattern dengan tipe String dan handle dengan tipe Handler
 // tipe Handler adalah sebuah interface yang membutukan method ServeHTTP
-//
 func (t *templateHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	t.once.Do(func() {
 		t.templ = template.Must(template.ParseFiles(filepath.Join("templates", t.filename)))
